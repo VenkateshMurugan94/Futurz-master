@@ -1,0 +1,17 @@
+<div class="container" ng-controller="fcontroller as fc">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="col-sm-3 col-md-3" ng-repeat="f in fc.fcustomer">
+				<div class="thumbnail">
+					<h4 class="text-center">
+						<span class="label label-info">{{f.name}}</span>
+					</h4>
+					<img src="http://localhost:8080/JobMiddle/getimage?email={{f.emailId}}" class="img-responsive" height="100" width="150" alt="no Pic">
+					<span class="btn btn-danger" ng-show="f.onlinestatus==false">OFFLINE</span>
+					<span class="btn btn-success" ng-show="f.onlinestatus==true">ONLINE</span>
+					<a href='' class="btn btn-primary pull-right">Chat</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
